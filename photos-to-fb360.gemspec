@@ -1,13 +1,13 @@
 # coding: utf-8
 
 Gem::Specification.new do |spec|
-  spec.name          = "jekyll-cayman-theme"
+  spec.name          = "photos-to-fb360"
   spec.version       = "0.1.0"
-  spec.authors       = ["Pietro F. Menna"]
-  spec.email         = ["pietromenna@yahoo.com"]
+  spec.authors       = ["ronald8192"]
+  # spec.email         = [""]
 
-  spec.summary       = %q{A Jekyll theme for the responsive theme for GitHub Pages http://jasonlong.github.io/cayman-theme/ }
-  spec.homepage      = "https://github.com/pietromenna/jekyll-cayman-theme"
+  spec.summary       = %q{A tutorial for making photos to spherical 360 panorama on Facebook}
+  spec.homepage      = "https://ronald8192.github.io/photos-to-fb360"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(_layouts|_includes|_sass|LICENSE|README)/i}) }
