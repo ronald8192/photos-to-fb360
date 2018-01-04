@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+  <meta charset="UTF-8">
+  <title>Project or Site name</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/cayman.css">
+  <link rel="stylesheet" href="/css/custom.css">
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-7536051765218549",
+      enable_page_level_ads: true
+    });
+  </script>
+</head>
+
+  <body>
+    <section class="page-header">
+  <h1 class="project-name">Project or Site name</h1>
+  <h2 class="project-tagline">A responsive theme for your project on GitHub Pages</h2>
+  <!-- <a href="#" class="btn">View on GitHub</a>
+  <a href="#" class="btn">Download .zip</a>
+  <a href="#" class="btn">Download .tar.gz</a> -->
+</section>
+
+    <section class="main-content">
+      
+      <p>Metadata is any data that helps describe the content or characteristics of a file.</p>
+
+<p><strong>Adobe’s Extensible Metadata Platform (XMP)</strong> is a file labeling technology that lets you embed metadata into files.</p>
+
+<p><code class="highlighter-rouge">ProjectionType</code> is one of the <code class="highlighter-rouge">XMP GPano Tags</code>, which written by <a href="https://developers.google.com/streetview/spherical-metadata">Google Photosphere</a>.</p>
+
+<p>This tutorial demonstrate the steps of:</p>
+<ol>
+  <li>Injecting Photo Sphere XMP Metadata into your photo</li>
+</ol>
+
+<p>This is one of the requirments for Facebook to detect your photo is a spherical 360 photos.</p>
+
+<h1 id="method-1-web-based-exif-editor">Method 1: Web-based Exif Editor</h1>
+
+<ul>
+  <li><a href="http://thexifer.net/">the eXif.er</a></li>
+</ul>
+
+<hr />
+
+<h1 id="method-2-exiftool">Method 2: Exiftool</h1>
+<hr />
+
+<h2 class="heading-1 card-shadow rounded" id="linux">Linux</h2>
+
+<h3 id="install-exiftool">Install exiftool</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Debian, Ubuntu, Linux Mint, ...
+sudo apt-get -y install libimage-exiftool-perl
+
+# CentOS, RadHat, Amazon Linux, ...
+sudo yum install -y perl-Image-ExifTool
+</code></pre></div></div>
+
+<h3 id="add-exif-xmp-tag">Add Exif XMP tag</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exiftool -ProjectionType="equirectangular" IMG_0001.jpg
+</code></pre></div></div>
+
+<h2 class="heading-1 card-shadow rounded" id="macos">macOS</h2>
+
+<h3 id="install-exiftool-1">Install exiftool</h3>
+
+<ul>
+  <li>macOS Package: <a href="https://sno.phy.queensu.ca/~phil/exiftool/ExifTool-10.71.dmg">ExifTool-10.71.dmg</a></li>
+  <li>or via brew: <code class="highlighter-rouge">brew install exiftool</code></li>
+</ul>
+
+<h3 id="add-exif-xmp-tag-1">Add Exif XMP tag</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exiftool -ProjectionType="equirectangular" IMG_0001.jpg
+</code></pre></div></div>
+
+<h2 class="heading-1 card-shadow rounded" id="windows">Windows</h2>
+
+<h3 id="install-exiftool-2">Install exiftool</h3>
+
+<ul>
+  <li>Download <a href="/assets/downloads/exiftool-10.71.zip">exiftool v10.71</a></li>
+  <li>Unzip and copy the <code class="highlighter-rouge">.exe</code> file to <code class="highlighter-rouge">C:\Windows\</code></li>
+</ul>
+
+<h3 id="add-exif-xmp-tag-2">Add Exif XMP tag</h3>
+
+<h4 id="by-command-recommended">By command (Recommended)</h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exiftool -ProjectionType="equirectangular" IMG_0001.jpg
+</code></pre></div></div>
+
+<h4 id="by-gui-exif-editor">By GUI Exif Editor</h4>
+
+<ul>
+  <li>Download <a href="/assets/downloads/exiftoolgui516.zip">ExifToolGUI v5.16</a></li>
+  <li>Unzip and open <code class="highlighter-rouge">ExifToolGUI.exe</code></li>
+</ul>
+
+<ol>
+  <li>Select your photo</li>
+  <li>Click <code class="highlighter-rouge">ExifTool direct</code></li>
+  <li>Enter <code class="highlighter-rouge">-ProjectionType="equirectangular"</code> into <code class="highlighter-rouge">command</code> box below, then hit <code class="highlighter-rouge">Enter</code> 
+<img src="http://localhost:4000/assets/img/step3-xmp-tag/exiftoolgui-add-tag.png" alt="Add tag" class="card-shadow" /></li>
+</ol>
+
+<hr />
+
+<h3 id="reference">Reference</h3>
+<ul>
+  <li>ExifTool by Phil Harvey: <a href="https://sno.phy.queensu.ca/~phil/exiftool/">https://sno.phy.queensu.ca/~phil/exiftool/</a></li>
+  <li>Editing 360 Photos &amp; Injecting Metadata: <a href="https://facebook360.fb.com/editing-360-photos-injecting-metadata/">https://facebook360.fb.com/editing-360-photos-injecting-metadata/</a></li>
+  <li>Adobe XMP standard: <a href="http://www.adobe.com/products/xmp.html">http://www.adobe.com/products/xmp.html</a></li>
+  <li>Google Photo Sphere XMP Metadata: <a href="https://developers.google.com/streetview/spherical-metadata">https://developers.google.com/streetview/spherical-metadata</a></li>
+</ul>
+
+
+      <footer class="site-footer">
+  <span class="site-footer-owner"><a href="http://localhost:4000">Project or Site name</a> is maintained by <a href="http://yourhomepage.com">Author name</a>.</span>
+  <span class="site-footer-credits">This page is hosting on <a href="https://github.com">GitHub</a>.</span>
+</footer>
+
+
+    </section>
+
+  </body>
+</html>
